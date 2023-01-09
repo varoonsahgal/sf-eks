@@ -1,5 +1,12 @@
-Under Search for services, type in and then click EC2.
-In the left-hand EC2 Dashboard navigation menu, click Instances.
+
+
+<img width="583" alt="Screen Shot 2023-01-08 at 11 13 23 PM" src="https://user-images.githubusercontent.com/25653204/211240064-c23f2b59-dcfe-448e-8416-86ec996431c3.png">
+
+
+
+1. Under Search for services, type in and then click EC2.
+
+2. In the left-hand EC2 Dashboard navigation menu, click Instances.
 Click on the Launch Instances button.
 Under Step 1, click Select against Amazon Linux 2 AMI (HVM).
 Under Step 2, select t2.micro and click on the Next button at the bottom.
