@@ -11,7 +11,7 @@ __all__ = ["SimpleHTTPRequestHandler"]
 
 import os
 import posixpath
-import BaseHTTPServer
+import http.server
 import urllib
 import cgi
 import shutil
@@ -30,7 +30,7 @@ my_bucket = s3.Bucket('kmsworkshop-'+GlobalAcc)
 
 
 
-class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
+class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
 
     """Simple HTTP request handler with GET/HEAD/POST commands.
     This serves files from the current directory and any of its
@@ -312,8 +312,8 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
 
 
 def test(HandlerClass = SimpleHTTPRequestHandler,
-         ServerClass = BaseHTTPServer.HTTPServer):
-    BaseHTTPServer.test(HandlerClass, ServerClass)
+         ServerClass = http.server.HTTPServer):
+    http.server.test(HandlerClass, ServerClass)
 
 
 if __name__ == '__main__':
